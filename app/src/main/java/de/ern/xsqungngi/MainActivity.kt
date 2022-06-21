@@ -1,5 +1,7 @@
 package de.ern.xsqungngi
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -81,5 +83,8 @@ NavigationAdapter.Listener {
         navigate(item)
     }
 
+    companion object {
+        fun getStartIntent(context: Context) = Intent(context, MainActivity::class.java)
+    }
 
 }
