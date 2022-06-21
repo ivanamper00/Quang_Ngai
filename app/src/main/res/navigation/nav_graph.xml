@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/aboutFragment">
+
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="de.ern.xsqungngi.about.AboutFragment"
+        android:label="Về chúng tôi"
+        tools:layout="@layout/fragment_about"/>
+
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="de.ern.xsqungngi.terms.TermsFragment"
+        android:label="@string/terms"
+        tools:layout="@layout/fragment_terms"/>
+
+    <fragment
+        android:id="@+id/testiFragment"
+        android:name="de.ern.xsqungngi.testi.TestiFragment"
+        android:label="Lời chứng thực"
+        tools:layout="@layout/fragment_testi"/>
+
+    <fragment
+        android:id="@+id/richFragment"
+        android:name="de.ern.xsqungngi.rich_luck.ui.RichFragment"
+        android:label="Rich Luck"
+        tools:layout="@layout/fragment_rich"/>
+
+    <fragment
+        android:id="@+id/howFragment"
+        android:name="de.ern.xsqungngi.how_play.HowFragment"
+        android:label="How to play"
+        tools:layout="@layout/fragment_how"/>
+
+</navigation>

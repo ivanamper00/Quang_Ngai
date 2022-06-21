@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/app_red"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <TextView
+               android:id="@+id/title"
+               android:layout_width="match_parent"
+               android:layout_height="?attr/actionBarSize"
+               android:background="#E9A227"
+               android:gravity="center_horizontal|bottom"
+               android:paddingBottom="8dp"
+               android:textAllCaps="true"
+               android:textColor="@color/white"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               tools:text="ASDASDASD" />
+
+           <androidx.fragment.app.FragmentContainerView
+               android:id="@+id/nav_host_fragment"
+               android:name="androidx.navigation.fragment.NavHostFragment"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               app:defaultNavHost="true"
+               app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/title"
+               app:navGraph="@navigation/nav_graph" />
+
+           <com.google.android.material.bottomnavigation.BottomNavigationView
+               android:id="@+id/bottomNavigationView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:itemIconTint="@drawable/menu_selector"
+               app:itemTextColor="@drawable/menu_selector"
+               app:labelVisibilityMode="labeled"
+               android:paddingBottom="10dp"
+               android:background="@drawable/background_bottom_nav"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:menu="@menu/activity_menu" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/navigation_drawer"
+            android:id="@+id/navigation"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
