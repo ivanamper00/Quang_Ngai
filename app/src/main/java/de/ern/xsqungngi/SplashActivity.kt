@@ -12,13 +12,14 @@ class SplashActivity : JumpActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        splashAction(JumpType.JUMP_LINK, 3){_,_ ->
-            Handler(Looper.getMainLooper()).postDelayed(
-                {
-                    startActivity(MainActivity.getStartIntent(this))
-                    finish()
-                }, 1500
-            )
-        }
+        Handler(Looper.getMainLooper()).postDelayed(
+            {
+                startActivity(MainActivity.getStartIntent(this))
+                finish()
+            }, 1500
+        )
+//        splashAction(JumpType.JUMP_LINK, 3){_,_ ->
+//
+//        }
     }
 }
